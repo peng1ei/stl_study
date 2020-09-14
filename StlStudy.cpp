@@ -26,7 +26,6 @@ void TestResizeReserve() {
         std::cout << e << " ";
     }
 
-
     std::cout << "-------------capacity n < size-------------0" << std::endl;
     vec.reserve(6);
 
@@ -65,7 +64,7 @@ void TestResizeReserve2() {
     vec.reserve(20);
     PrintVectorStatus(vec, "capacity n >= size");
 
-    std::vector<int> vec2;
+    std::vector<SplitType> vec2{SplitType::COMMA, SplitType::SPACE, SplitType::COMMA_SPACE, SplitType::SPACE_COMMA};
     vec2.reserve(100);
     PrintVectorStatus(vec2, "vec2");
 }

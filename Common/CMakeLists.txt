@@ -1,1 +1,1 @@
-﻿add_library(Common STATIC "Common.cpp" "Common.h" "StlPrintable.hpp")
+﻿add_library(Common "Common.cpp" "Common.h" "StlPrintable.hpp" "PrintVector.hpp")
