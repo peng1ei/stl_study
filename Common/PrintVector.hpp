@@ -1,5 +1,6 @@
 #include "Common.h"
 #include <vector>
+#include <iostream>
 #include <type_traits>
 
 namespace stlp {
@@ -42,13 +43,15 @@ namespace stlp {
     }
 
     template <typename T>
-    void PrintVectorStatus(const std::vector<T>& vec, const std::string& title = "Vec", SplitType st = SplitType::SPACE) {
+    void PrintVectorStatus(const std::vector<T>& vec, const std::string& title = "Vec", bool display_max_size = false, SplitType st = SplitType::SPACE) {
         std::cout << "---------------------------[Vector] " 
             << title << "[0x" << &vec << "]" << "---------------------------" << std::endl;
         PrintVectorElems(vec, "", st);
         PrintVectorSize(vec, "");
         PrintVectorCapacity(vec, "");
-        PrintVectorMaxSize(vec, "");
+
+        if (display_max_size)
+            PrintVectorMaxSize(vec, "");
         std::cout << std::endl;
     }
 

@@ -1,7 +1,7 @@
 ﻿// Common.h : Header file for your target.
 #pragma once
 #include <string>
-#include <ostream>
+#include <iostream>
 #include <complex>
 
 #define COUT_TITLE (std::cout << title << " ")

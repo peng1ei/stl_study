@@ -1,1 +1,14 @@
-﻿add_library(Common "Common.cpp" "Common.h" "StlPrintable.hpp" "PrintVector.hpp")
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.10)
+PROJECT(Common)
+
+LIST(APPEND COMMON_SRCS ${CMAKE_CURRENT_LIST_DIR}/Common.cpp)
+#FILE(GLOB COMMON_SRCS ${CMAKE_CURRENT_LIST_DIR}/*.cpp)
+
+MESSAGE("source dir: ${CMAKE_CURRENT_SOURCE_DIR}")
+MESSAGE("current dir: ${CMAKE_CURRENT_LIST_DIR}")
+
+SET(TGT Common)
+ADD_LIBRARY(${TGT} STATIC ${COMMON_SRCS})
+
+
+
