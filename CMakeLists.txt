@@ -12,6 +12,7 @@ SET(CMAKE_CXX_STANDARD 11)
 
 OPTION(BUILD_STL_STUDY "build stl study" ON)
 OPTION(BUILD_VECTOR "build vector" ON)
+OPTION(BUILD_TEST_CXXOPTS "build vector" OFF)
 
 MESSAGE("CMAKE_BINARY_DIR ${CMAKE_BINARY_DIR}")
 #---------------------------------------------------------
@@ -50,4 +51,8 @@ IF (BUILD_VECTOR)
 
     # 在当前Build目录下直构建相关文件
     # INCLUDE(Vector/CMakeLists.txt)
+ENDIF()
+
+IF(BUILD_TEST_CXXOPTS)
+    ADD_SUBDIRECTORY(TestCxxOpts)
 ENDIF()
