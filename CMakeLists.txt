@@ -13,6 +13,7 @@ SET(CMAKE_CXX_STANDARD 11)
 OPTION(BUILD_STL_STUDY "build stl study" ON)
 OPTION(BUILD_VECTOR "build vector" ON)
 OPTION(BUILD_TEST_CXXOPTS "build vector" OFF)
+OPTION(BUILD_DEQUE "build deque" ON)
 
 MESSAGE("CMAKE_BINARY_DIR ${CMAKE_BINARY_DIR}")
 #---------------------------------------------------------
@@ -55,4 +56,8 @@ ENDIF()
 
 IF(BUILD_TEST_CXXOPTS)
     ADD_SUBDIRECTORY(TestCxxOpts)
+ENDIF()
+
+IF(BUILD_DEQUE)
+    ADD_SUBDIRECTORY(Deque)
 ENDIF()
