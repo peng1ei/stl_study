@@ -3,9 +3,11 @@
 
 #include "Vector.h"
 #include "Construct.hpp"
+#include "ShrinkToFit.hpp"
 
 int main() {
-	TestConstruct();
+	//TestConstruct();
+    TestShinkToFit();
 
 	return 0;
 }
