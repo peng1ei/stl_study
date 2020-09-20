@@ -20,7 +20,7 @@ namespace stlp {
         PrintDequeElems<T>(deq.begin(), deq.end(), title, st);
     }
 
-    template <typename T, typename Iter = std::deque<T>::const_iterator>
+    template <typename T, typename Iter = typename std::deque<T>::const_iterator>
     void PrintDequeElems(Iter begin, Iter end, const std::string& title = "Deque", SplitType st = SplitType::SPACE) {
         //static_assert(std::is_scalar<T>::value || std::is_same<T, std::string>::value,
         //    "The element type of the container is non-arithmetic.");

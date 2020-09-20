@@ -50,23 +50,23 @@ void TestResizeReserve2() {
     using namespace stlp;
 
     std::vector<int> vec{ 1, 2, 3, 4, 5 };
-    PrintVectorStatus(vec, "src");
+    PrintVector(vec, "src");
 
     vec.resize(3);
-    PrintVectorStatus(vec, "n < size");
+    PrintVector(vec, "n < size");
 
     vec.resize(9, 66);
-    PrintVectorStatus(vec, "n >= size");
+    PrintVector(vec, "n >= size");
 
     vec.reserve(6);
-    PrintVectorStatus(vec, "capacity n < size");
+    PrintVector(vec, "capacity n < size");
 
     vec.reserve(20);
-    PrintVectorStatus(vec, "capacity n >= size");
+    PrintVector(vec, "capacity n >= size");
 
     std::vector<SplitType> vec2{SplitType::COMMA, SplitType::SPACE, SplitType::COMMA_SPACE, SplitType::SPACE_COMMA};
     vec2.reserve(100);
-    PrintVectorStatus(vec2, "vec2");
+    PrintVector(vec2, "vec2");
 }
 
 int main()

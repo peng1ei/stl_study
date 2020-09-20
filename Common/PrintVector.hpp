@@ -16,7 +16,7 @@ namespace stlp {
         PrintVectorElems<T>(vec.begin(), vec.end(), title, st);
     }
 
-    template <typename T, typename Iter = std::vector<T>::const_iterator>
+    template <typename T, typename Iter = typename std::vector<T>::const_iterator>
     void PrintVectorElems(Iter begin, Iter end, const std::string& title = "Vec", SplitType st = SplitType::SPACE) {
         //static_assert(std::is_scalar<T>::value || std::is_same<T, std::string>::value, 
         //    "The element type of the container is non-arithmetic.");
@@ -65,7 +65,7 @@ namespace stlp {
         PrintDequeSize(vec, "");
         std::cout << std::endl;
 
-        PrintMultiDeque<T>(args...);
+        PrintMultiVector<T>(args...);
     }
 
 } // namespace stlp
