@@ -1,3 +1,4 @@
+#pragma once
 #include "Common.h"
 #include <vector>
 #include <iostream>
@@ -43,8 +44,8 @@ namespace stlp {
     }
 
     template <typename T>
-    void PrintVectorStatus(const std::vector<T>& vec, const std::string& title = "Vec", bool display_max_size = false, SplitType st = SplitType::SPACE) {
-        std::cout << "---------------------------[Vector] " << title << "[0x" << &vec << "]" << "---------------------------" << std::endl;
+    void PrintVector(const std::vector<T>& vec, const std::string& title = "Vec", bool display_max_size = false, SplitType st = SplitType::SPACE) {
+        std::cout << "---------------------------[Vector] " << title << " [0x" << &vec << "]" << "---------------------------" << std::endl;
         PrintVectorElems(vec, "", st);
         PrintVectorSize(vec, "");
         PrintVectorCapacity(vec, "");
@@ -52,6 +53,19 @@ namespace stlp {
         if (display_max_size)
             PrintVectorMaxSize(vec, "");
         std::cout << std::endl;
+    }
+
+    template <typename T, typename... Args>
+    void PrintMultiVector() {}
+
+    template <typename T, typename... Args>
+    void PrintMultiVector(const std::string &title, const std::vector<T> &vec, Args... args) {
+        std::cout << "---------------------------[Vector] " << title << " [0x" << &vec << "]" << "---------------------------" << std::endl;
+        PrintDequeElems(vec, "", SplitType::SPACE);
+        PrintDequeSize(vec, "");
+        std::cout << std::endl;
+
+        PrintMultiDeque<T>(args...);
     }
 
 } // namespace stlp

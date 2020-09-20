@@ -2,7 +2,7 @@
 //
 
 #include "StlStudy.h"
-#include "StlPrintable.hpp"
+#include "PrintSTL.hpp"
 
 void TestResizeReserve() {
     std::vector<int> vec{ 1, 2, 3, 4, 5 };
